@@ -39,7 +39,7 @@ webmaster_verifications:
 # theme
 
 twitter_username: vahaah
-github_username:  vahaah
+github_username: vahaah
 instagram_username: vahaah
 telegram_username: vahaah
 
@@ -76,7 +76,6 @@ plugins:
   - jekyll-bits
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-maps
 
 exclude:
   - README.md
@@ -113,8 +112,3 @@ compress_html:
   clippings: [div, p, ul, td, h1, h2]
   comments: all
   # endings: all
-
-# see https://github.com/ayastreb/jekyll-maps
-maps:
-  google:
-    api_key: AIzaSyAW5GgRpxTUCH_IIp-jIhrDR7faBwdlGNw
