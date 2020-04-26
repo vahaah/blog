@@ -105,7 +105,7 @@ module Jekyll
           f.puts "#{m}-01T00:00 #{c}"
         end
       end
-      
+
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
       puts "stats.svg generated"
     end

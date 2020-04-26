@@ -69,6 +69,7 @@ yandex_metrika: true
 
 disqus:
   shortname: vahaah
+
 plugins:
   - jekyll-feed
   - jekyll-typogrify
