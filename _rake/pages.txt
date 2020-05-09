@@ -1,7 +1,7 @@
 CNAME
 index.html
 robots.txt
-about/index.html
+about-me.html
 404.html
 favicon.ico
 rss.xml

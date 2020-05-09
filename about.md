@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about-me.html
 ---
 
 Hi, I'm Alex Vakhitov.
