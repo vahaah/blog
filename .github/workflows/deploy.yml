@@ -32,6 +32,6 @@ jobs:
       - name: Make sure all pages have excerpts
         run: bundle exec rake clean && bundle exec rake excerpts
       - name: Git Config
-        run: git config --global user.email "alex.vakhitov@gmail.com && git config --global user.name "Alex Vakhitov"
+        run: git config --global user.email "alex.vakhitov@gmail.com" && git config --global user.name "Alex Vakhitov"
       - name: Deploy
         run: bundle exec jgd
