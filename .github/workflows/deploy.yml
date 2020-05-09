@@ -2,25 +2,36 @@ name: Ruby
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build-and-deploy:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby
-    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-    # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
-      uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
-      with:
-        ruby-version: 2.6
-    - name: Install dependencies
-      run: bundle install
-    - name: Deploy
-      run: bundle exec jgd
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
+        # change this to (see https://github.com/ruby/setup-ruby#versioning):
+        # uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+        with:
+          ruby-version: 2.6
+      - name: Install dependencies
+        run: bundle install
+      - name: Test pages
+        run: bundle exec rake clean && bundle exec rake pages
+      - name: Test w3c
+        run: bundle exec rake clean && bundle exec rake w3c
+      - name: Test HTML proofer
+        run: bundle exec rake clean && bundle exec rake proofer
+      - name: Ping all foreign links
+        run: bundle exec rake clean && bundle exec rake ping
+      - name: Make sure all pages have excerpts
+        run: bundle exec rake clean && bundle exec rake excerpts
+      - name: Git Config
+        run: git config --global user.email "alex.vakhitov@gmail.com && git config --global user.name "Alex Vakhitov"
+      - name: Deploy
+        run: bundle exec jgd

@@ -37,7 +37,7 @@ def all_links()
     array + Nokogiri::HTML(File.read(f)).xpath(
       '//article//a/@href'
     ).to_a.map(&:to_s)
-  end.sort.map{ |a| a.gsub(/^\//, 'https://ru.vahaah.guru/') }
+  end.sort.map{ |a| a.gsub(/^\//, 'https://vakhitov.dev/') }
 end
 
 desc 'Delete _site directory'
@@ -98,7 +98,6 @@ task w3c: [:build] do
   validator = NuValidator.new
   [
     'index.html',
-    '2013/04/28/riealizatsiia-prostoi-korziny-na-django.html'
   ].each do |p|
     file = "_site/#{p}"
     results = validator.validate_file(file)
@@ -138,14 +137,14 @@ end
 desc 'Ping all foreign links'
 task ping: [:build] do
   links = all_links().uniq
-    .reject{ |a| a.start_with? 'https://ru.vahaah.guru/' }
+    .reject{ |a| a.start_with? 'https://vakhitov.dev/' }
     .reject{ |a| a.include? 'linkedin.com' }
     .reject{ |a| !(a =~ /^https?:\/\/.*/) }
-  tmp = Tempfile.new(['yegor256-', '.txt'])
+  tmp = Tempfile.new(['vakhitov-', '.txt'])
   tmp << links.join("\n")
   tmp.flush
   tmp.close
-  out = Tempfile.new(['vahaah-', '.txt'])
+  out = Tempfile.new(['vakhitov-', '.txt'])
   out.close
   puts "#{links.size} links found, testing them..."
   system("./_rake/ping.sh #{tmp.path} #{out.path}")
@@ -165,7 +164,7 @@ end
 
 desc 'Make sure all pages have excerpts'
 task :excerpts do
-  Dir['_posts/**/*.markdown'].each do |f|
+  Dir['_posts/**/*.md'].each do |f|
     fail "No excerpt in #{f}" unless File.read(f).include? '<!--more-->'
   end
   done 'All articles have excerpts'
