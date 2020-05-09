@@ -1,4 +1,4 @@
-Sitemap: https://ru.vahaah.guru/sitemap.xml
+Sitemap: https://vakhitov.dev/sitemap.xml
 
 User-agent: *
 Disallow: /p/
