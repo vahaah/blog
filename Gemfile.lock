@@ -115,8 +115,7 @@ GEM
     public_suffix (4.0.4)
     pygments.rb (1.2.1)
       multi_json (>= 1.0.0)
-    rainbow (2.2.2)
-      rake
+    rainbow (3.0.0)
     rake (12.3.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
@@ -198,7 +197,7 @@ DEPENDENCIES
   nokogiri (= 1.10.8)
   nuggets (= 1.6.0)
   pygments.rb (= 1.2.1)
-  rainbow (= 2.2.2)
+  rainbow (= 3.0.0)
   rake (>= 12.3.3)
   redcarpet (= 3.4.0)
   rubocop (= 0.62.0)
