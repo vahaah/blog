@@ -82,7 +82,7 @@ GEM
     json (1.8.6)
     json (1.8.6-java)
     kramdown (1.17.0)
-    liquid (4.0.1)
+    liquid (4.0.3)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -192,7 +192,7 @@ DEPENDENCIES
   jekyll-typogrify
   jgd
   json (= 1.8.6)
-  liquid (= 4.0.1)
+  liquid (= 4.0.3)
   mail (= 2.7.1)
   nokogiri (= 1.10.8)
   nuggets (= 1.6.0)
