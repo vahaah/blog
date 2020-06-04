@@ -34,7 +34,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Performance-booster for watching directories on Windows
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
-gem 'fastimage', '2.1.5'
+gem 'fastimage', '2.1.7'
 gem 'fontcustom', '1.3.8'
 gem 'json', '1.8.6'
 gem 'html-proofer', '3.7.5'
