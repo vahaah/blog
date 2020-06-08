@@ -18,7 +18,7 @@ gem 'jekyll', '3.8.7'
 group :jekyll_plugins do
   gem 'jekyll-typogrify'
   gem 'jekyll-seo-tag', '~> 2.1'
-  gem 'jekyll-feed', '~> 0.9'
+  gem 'jekyll-feed', '~> 0.13'
   gem 'jekyll-paginate'
   gem 'jekyll-bits'
   gem 'jekyll-gist'

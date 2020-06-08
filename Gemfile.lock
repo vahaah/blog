@@ -54,8 +54,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-bits (0.15)
       fastimage
-    jekyll-feed (0.11.0)
-      jekyll (~> 3.3)
+    jekyll-feed (0.13.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
     jekyll-paginate (1.1.0)
@@ -179,7 +179,7 @@ DEPENDENCIES
   html-proofer (= 3.15.3)
   jekyll (= 3.8.7)
   jekyll-bits
-  jekyll-feed (~> 0.9)
+  jekyll-feed (~> 0.13)
   jekyll-gist
   jekyll-paginate
   jekyll-redirect-from
