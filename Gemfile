@@ -37,7 +37,7 @@ gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 gem 'fastimage', '2.2.0'
 gem 'fontcustom', '2.0.0'
 gem 'json', '1.8.6'
-gem 'html-proofer', '3.16.0'
+gem 'html-proofer', '3.17.0'
 gem 'liquid', '4.0.3'
 gem 'mail', '2.7.1'
 gem 'nokogiri', '1.10.10'
