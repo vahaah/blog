@@ -17,7 +17,7 @@ gem 'jekyll', '4.1.1'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-typogrify'
-  gem 'jekyll-seo-tag', '~> 2.1'
+  gem 'jekyll-seo-tag', '~> 2.7'
   gem 'jekyll-feed', '~> 0.15'
   gem 'jekyll-paginate'
   gem 'jekyll-bits'
