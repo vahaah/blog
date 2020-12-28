@@ -17,7 +17,7 @@ GEM
     eventmachine (1.2.7-x86-mingw32)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    fastimage (2.2.0)
+    fastimage (2.2.1)
     ffi (1.14.2)
     ffi (1.14.2-java)
     ffi (1.14.2-x64-mingw32)
@@ -187,7 +187,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
-  fastimage (= 2.2.0)
+  fastimage (= 2.2.1)
   fontcustom (= 2.0.0)
   html-proofer (= 3.18.2)
   jekyll (= 4.2.0)
