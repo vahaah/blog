@@ -1,5 +1,0 @@
-Sitemap: https://vakhitov.dev/sitemap.xml
-
-User-agent: *
-Disallow: /p/
-Disallow: /404.html
