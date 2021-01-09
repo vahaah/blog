@@ -1,0 +1,59 @@
+baseurl = "https://vakhitov.dev/"
+defaultcontentlanguage = "en-gb"
+languagecode = "en-gb"
+title = "Alex Vakhitov"
+
+canonifyurls = true
+paginate = 50
+
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+pygmentsstyle = "bw"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "Alex Vakhitov"
+description = "Yet another blog about development and computers"
+info = "Software Engineer and Haskeller"
+keywords = "blog,developer,personal"
+
+rtl = false
+
+custom_css = ["css/custom.css"]
+math = true
+
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorscheme = "light"
+
+# Hide the toggle button, along with the associated vertical divider
+hidecolorschemetoggle = true
+
+# Social links
+[[params.social]]
+icon = "fa fa-github fa-2x"
+name = "Github"
+url = "https://github.com/vahaah/"
+weight = 1
+[[params.social]]
+icon = "fa fa-twitter fa-2x"
+name = "Twitter"
+url = "https://twitter.com/vahaah/"
+weight = 2
+[[params.social]]
+icon = "fa fa-rss"
+name = "RSS"
+rel = "alternate"
+type = "application/rss+xml"
+url = "https://vakhitov.dev/rss.xml"
+weight = 6
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 1
