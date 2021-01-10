@@ -1,12 +1,12 @@
 {{ define "title" }}
-{{ title (lower .Title) | default .Title }} · {{ .Site.Title }}
+Alex Vakhitov's Blog
 {{ end }}
 {{ define "content" }}
-<section class="container list">
+<section class="container list" itemscope="" itemtype="http://schema.org/Blog">
   {{ .Content }}
   <ul>
     {{- range .Paginator.Pages -}}
-    {{- .Render "posts/li" -}}
+    {{- .Render "li" -}}
     {{- end -}}
   </ul>
 
