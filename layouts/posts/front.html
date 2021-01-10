@@ -1,0 +1,40 @@
+<div class="post">
+  <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header>
+      <div class="post-title">
+        <h1 class="title">
+          <a href="{{ .Params.externalLink | default .RelPermalink }}">
+            <span itemprop="name headline mainEntityOfPage">{{ .Title }}</span>
+          </a>
+        </h1>
+      </div>
+      <ul class="subline">
+        <li>
+          <time itemprop="datePublished dateModified" datetime="">
+            {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+          </time>
+        </li>
+        <li itemprop="wordCount">
+          {{ .Content | countwords }} words
+        </li>
+        <li>
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          {{ i18n "reading_time" .ReadingTime }}
+        </li>
+        <li>
+          <i class="fa fa-comments"></i>
+          <a href="{{ .Params.externalLink | default .RelPermalink }}#disqus_thread"
+            itemprop="discussionUrl">comments</a>
+        </li>
+      </ul>
+    </header>
+    <div class="main" itemprop="description">
+      {{.Summary}}
+    </div>
+    <p>
+      <a href="{{ .Params.externalLink | default .RelPermalink }}" itemprop="url">
+        Continue...
+      </a>
+    </p>
+  </section>
+</div>

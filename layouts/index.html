@@ -3,12 +3,10 @@ Alex Vakhitov's Blog
 {{ end }}
 {{ define "content" }}
 <section class="container list" itemscope="" itemtype="http://schema.org/Blog">
-  {{ .Content }}
-  <ul>
-    {{- range .Paginator.Pages -}}
-    {{- .Render "li" -}}
-    {{- end -}}
-  </ul>
+
+  {{- range .Paginator.Pages -}}
+  {{- .Render "front" -}}
+  {{- end -}}
 
   {{ partial "pagination.html" . }}
 </section>

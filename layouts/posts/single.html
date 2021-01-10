@@ -20,7 +20,12 @@
             <i class="fa fa-clock-o" aria-hidden="true"></i>
             {{ i18n "reading_time" .ReadingTime }}
           </span>
+          <span class="place">
+            <i class="fa fa-map" aria-hidden="true"></i>
+            {{.Params.place }}
+          </span>
         </div>
+
         {{ with .Page.Params.Authors }}{{ partial "taxonomy/authors.html" . }}{{ end }}
         {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
         {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}

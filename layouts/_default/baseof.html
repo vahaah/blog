@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="{{ .Site.Language.Lang }}" itemscope itemtype="http://schema.org/WebSite">
 
   <head>
     <meta charset="utf-8">
@@ -127,24 +127,5 @@
     {{ range .Site.Params.customJS }}
       <script src="{{ . | relURL }}"></script>
     {{ end }}
-
-    {{ template "_internal/google_analytics.html" . }}
-
-    {{ if and .Site.Params.fathomAnalytics .Site.Params.fathomAnalytics.siteID }}
-      {{- partial "analytics/fathom" . -}}
-    {{ end }}
-
-    {{ if and .Site.Params.plausibleAnalytics .Site.Params.plausibleAnalytics.domain }}
-      {{- partial "analytics/plausible" . -}}
-    {{ end }}
-
-    {{ if and .Site.Params.goatCounter .Site.Params.goatCounter.code }}
-      {{- partial "analytics/goatcounter" . -}}
-    {{ end }}
-
-    {{ if and .Site.Params.cloudflare .Site.Params.cloudflare.token }}
-      {{- partial "analytics/cloudflare" . -}}
-    {{ end }}
   </body>
-
 </html>
