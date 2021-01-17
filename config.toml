@@ -3,7 +3,7 @@ defaultcontentlanguage = "en-gb"
 languagecode = "en-gb"
 title = "Alex Vakhitov"
 
-googleAnalytics = "G-NEL0QPWDVX"
+googleAnalytics = "UA-131173493-1"
 
 canonifyurls = true
 paginate = 50
